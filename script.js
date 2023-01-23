@@ -20,9 +20,10 @@ function CalculateTimestamp(_timeInMinute)
   let textResult = "";
 
   textResult = jam >= 1 ? jam + " Jam " : "";
-  textResult = textResult + menit + " Menit " + Math.round(detik*60) + " detik";
+  textResult += menit >= 1 ? menit + " Menit " : "";
+  textResult += Math.round(detik*60) ? Math.round(detik*60) + " Detik" : "";
 
-  return textResult;
+  return textResult != "" ? textResult : "0 Detik";
 }
 
 function SubmitForm()
