@@ -13,7 +13,7 @@ function CalculateTimestamp(_timeInMinute)
   // jam = 72/60 = parseInt(1.xxx) = 1
   // update menit ->  menit = 72 - (1*60) = 72 - 60 = 12
   let menit = parseInt(_timeInMinute);
-  let detik = _timeInMinute - menit;
+  let detik = _timeInMinute - menit; 
   let jam = parseInt(menit/60);
   menit = menit - (jam*60)
   
