@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Pemantauan Kelembapan Tanah dan Suhu Menggunakan Metode Fuzzy Mamdani</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <script src="fuzzy.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row my-3">
+      <h3 class="text-center">Sistem Pemantauan Kelembapan Tanah dan Suhu Menggunakan Metode Fuzzy Mamdani</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+          
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="suhu" class="form-label">Suhu</label>
+                  <div class="input-group">
+                    <input type="number" class="form-control" id="suhu" placeholder="Suhu">
+                    <span class="input-group-text" id="basic-addon1">ºC</span>
+                  </div>
+                  <div class="form-text">Masukan data suhu.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="kelembaban" class="form-label">Kelembaban</label>
+                  <div class="input-group">
+                    <input type="email" class="form-control" id="kelembaban" placeholder="Kelembaban">
+                    <span class="input-group-text" id="basic-addon2">RH</span>
+                  </div>
+                  <div class="form-text">Masukan data kelembaban.</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="btn btn-sm btn-link text-center d-block" onclick="ResetForm()">Reset form</div>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="card-footer bg-transparent">
+            <div class="d-grid gap-2">
+              <button type="button" id="submitButton" class="btn btn-primary" onClick="SubmitForm()">Check</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <p class="text-center">Dari hasil analisis fuzzy, Anda harus menyiram tanaman selama:</p>
+            <h3 class="text-center my-5" id="resultText">~</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
